@@ -1,0 +1,1 @@
+.\Setup-GABLabAccount.ps1 -SubscriptionId "<subscription>" -ResourceGroupName "GABLab2019" -Location "East Us" -ApplicationDisplayName "GABLab2019" -SelfSignedCertPlainPassword "abc"
