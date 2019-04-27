@@ -54,7 +54,7 @@ function CreateServicePrincipal([System.Security.Cryptography.X509Certificates.X
     $keyValue = [System.Convert]::ToBase64String($PfxCert.GetRawCertData())
     $KeyId = (New-Guid).Guid
 
-    $KeyCredential = New-Object  Microsoft.Azure.Commands.Resources.Models.ActiveDirectory.PSADKeyCredential
+    $KeyCredential = New-Object Microsoft.Azure.Graph.RBAC.Version1_6.ActiveDirectory.PSADKeyCredential
     $KeyCredential.StartDate = $CurrentDate
     $KeyCredential.EndDate= $PfxCert.NotAfter # [DateTime]$PfxCert.GetExpirationDateString()
     $KeyCredential.KeyId = $KeyId
